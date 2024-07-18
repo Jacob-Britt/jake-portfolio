@@ -151,10 +151,10 @@ swiper-slide {
   font-family: 'Roboto', sans-serif; /* Your theme's font */
 }
 
-.menu:hover {
+/* .menu:hover {
   transform: translate(-50%, -50%) translateY(-5px);
   box-shadow: 0 12px 45px rgba(0, 0, 0, 0.3);
-}
+} */
 
 .menu ul {
   list-style: none;
@@ -177,7 +177,7 @@ swiper-slide {
 .menu li:hover {
   background-color: rgba(0, 0, 0, 0.7); /* Darker shade on hover */
   transform: scale(1.05);
-  color: #1ABC9C; /* A bright accent color from your theme */
+  color: #00d8ff; /* A bright accent color from your theme */
 }
 
 .header .menu li {

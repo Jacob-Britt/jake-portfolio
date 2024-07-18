@@ -55,19 +55,6 @@ body, html {
   z-index: 1;
 }
 
-.header .menu ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.header .menu li {
-  cursor: pointer;
-}
-
-.header .menu li:hover {
-  color: #00d8ff;
-}
 
 body {
   margin: 0;
@@ -111,22 +98,4 @@ body {
   }
 }
 
-.nav-buttons {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-top: 20px;
-}
 
-.nav-buttons button {
-  background-color: #333;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.nav-buttons button:hover {
-  background-color: #555;
-}

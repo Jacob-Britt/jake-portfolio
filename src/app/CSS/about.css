@@ -1,8 +1,8 @@
 .about-section {
-  padding: 4rem 0; /* This padding might cause overflow issues */
-  text-align: center;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.8) 100%);
-  color: #fff;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
 }
 
 .about-section h2 {
@@ -26,7 +26,7 @@
 }
 
 .about-section a:hover {
-  background: #666;
+  background: #666666;
 }
 
 .section.hidden {

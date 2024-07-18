@@ -2,6 +2,7 @@
 
 import React from 'react';
 import './CSS/header.css';
+import './CSS/about.css';
 
 const Header: React.FC = () => {
   const scrollToSection = (sectionId: string) => {
@@ -13,24 +14,18 @@ const Header: React.FC = () => {
 
   return (
     <section className="header-section relative text-white" id="about">
-      <nav className="absolute left-40 top-20 p-4 bg-opacity-50 bg-black rounded-lg shadow-lg">
-        <ul className="space-y-4 text-left">
-          <li
-            className="text-2xl font-bold cursor-pointer hover:text-gray-400"
-            onClick={() => scrollToSection('projects')}
-          >
+      <nav>
+        <ul>
+          <li onClick={() => scrollToSection('projects')}>
             Work
           </li>
-          <li
-            className="text-2xl font-bold cursor-pointer hover:text-gray-400"
-            onClick={() => scrollToSection('about')}
-          >
+          <li onClick={() => scrollToSection('about')}>
             About
           </li>
         </ul>
       </nav>
       <div className="text-center mb-8">
-        <h1 className="text-6xl font-semibold mb-4 animate-glitch">Jacob's Portfolio</h1>
+        <h1 className="title-glitch-effect">Jacob Britton</h1>
         <div className="relative w-64 h-64 md:w-96 md:h-96 rounded-full overflow-hidden shadow-lg mx-auto mb-8">
           <img src="/jake.jpg" alt="Jacob" className="object-cover w-full h-full animate-glitch" />
         </div>
@@ -41,9 +36,6 @@ const Header: React.FC = () => {
         >
           Download Resume
         </a>
-      </div>
-      <div className="absolute bottom-8 left-8 text-lg font-semibold animate-pulse">
-        Scroll Down
       </div>
       <div className="about-section text-center p-8 bg-gradient-to-b from-gray-800 to-black rounded-lg shadow-lg mx-8 mb-8">
         <h2 className="text-4xl font-semibold mb-4">About Me</h2>
@@ -57,7 +49,7 @@ const Header: React.FC = () => {
           I am actively seeking opportunities where I can apply my skills and contribute to innovative projects. I am particularly interested in roles that involve problem-solving, creativity, and continuous learning.
         </p>
         <div className="flex justify-center space-x-4">
-          <a href="https://github.com/jacob-britton" target="_blank" rel="noopener noreferrer" className="bg-gray-700 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded-lg inline-block">
+          <a href="https://github.com/Jacob-Britt" target="_blank" rel="noopener noreferrer" className="bg-gray-700 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded-lg inline-block">
             GitHub
           </a>
           <a href="https://www.linkedin.com/in/jacob-britton-885965254/" target="_blank" rel="noopener noreferrer" className="bg-gray-700 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded-lg inline-block">
