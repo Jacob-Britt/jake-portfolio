@@ -15,10 +15,11 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
-  height: 100vh; /* Full height */
+  min-height: 100vh; /* Minimum height to ensure it fits the viewport */
   width: 100%;
   overflow: hidden;
-  padding-top: 40px; /* Add padding to move the content up */
+  padding-top: 20px; /* Add padding to move the content up */
+  box-sizing: border-box;
 }
 
 #tsparticles {
@@ -67,7 +68,7 @@ swiper-slide {
   text-align: center;
   transition: transform 0.3s ease-in-out;
   width: 100%;
-  max-height: 70vh; /* Ensure it does not overflow */
+  max-height: calc(100vh - 60px); /* Ensure it does not overflow */
   overflow: hidden;
 }
 
@@ -111,6 +112,7 @@ swiper-slide {
   margin-right: auto; /* Move logo to the left */
 }
 
+/* Menu Styles */
 .menu {
   display: flex;
   flex-direction: column;
@@ -166,7 +168,7 @@ swiper-slide {
 }
 
 .header .menu li:hover {
-  color: #1a8ebc; /* A bright accent color from your theme */
+  color: #1ABC9C; /* A bright accent color from your theme */
 }
 
 .header .menu a {
