@@ -1,7 +1,7 @@
 .index-container {
     position: absolute;
-    top: 250px;
-    right: 949px;
+    top: 20%;
+    right: 20%;
     background-color: rgba(0, 0, 0, 0.7);
     padding: 20px;
     border-radius: 10px;
