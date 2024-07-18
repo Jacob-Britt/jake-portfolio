@@ -1,0 +1,33 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll; /* Allows vertical scrolling */
+    scroll-behavior: smooth;
+}
+
+.full-height {
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Ensures content does not overflow the section */
+}
+
+.header-hidden {
+    display: none; /* Hide header when scrolling past the project section */
+}
+  
+
+/* hide scroll bar */
+::-webkit-scrollbar {
+    display: none;
+}
+/* disable scrolling */
+html, body {
+    overflow: hidden;
+    height: 100%;
+}
