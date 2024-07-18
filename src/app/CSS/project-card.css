@@ -12,7 +12,7 @@
   position: relative;
   top: 15%;
   z-index: 5; /* Ensure it is above other elements */
-  margin-bottom: 25rem;
+  margin-bottom: 20rem;
 }
 
 .projects-content {
@@ -44,7 +44,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center; 
-  margin-bottom: 35rem;
+  margin-bottom: 25rem;
+  margin-top: 5rem;
 }
 
 .project-card-content h2 {
