@@ -6,7 +6,7 @@ import 'swiper/css/pagination';
 import ProjectCard from './ProjectCard';
 import ParticlesBackground from './ParticlesBackground';
 import './CSS/projects.css';
-import './CSS/background-effects.css';
+// import './CSS/background-effects.css';
 import Index from './Index';
 import Footer from './Footer';
 import SwiperCore from 'swiper';

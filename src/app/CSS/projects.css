@@ -45,7 +45,7 @@ swiper-slide {
 /* Project card styling */
 .project-card {
   flex: 0 0 60%; /* Smaller size */
-  max-width: 700px; /* Reduced max-width */
+  max-width: 200px; /* Reduced max-width */
   margin: 20px;
 }
 
@@ -67,9 +67,16 @@ swiper-slide {
   border: 1px solid rgba(255, 255, 255, 0.18);
   text-align: center;
   transition: transform 0.3s ease-in-out;
-  width: 100%;
-  max-height: calc(100vh - 60px); /* Ensure it does not overflow */
+  width: 40%;
+  max-height: 70vh; /* Ensure it does not overflow */
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .project-card-content h2 {
@@ -82,19 +89,24 @@ swiper-slide {
 .project-card-content p {
   color: #b0e0e6;
   margin-bottom: 10px;
+  max-height: 20vh; /* Added max-height for text */
+  overflow: auto;
 }
 
 .project-card-content video,
 .project-card-content img {
   border-radius: 10px;
   width: 100%;
-  max-height: 15vh; /* Ensure it fits well within the card */
+  max-height: 30vh; /* Ensure it fits well within the card */
   transition: transform 0.3s ease-in-out;
 }
 
-/* Project img card syles */
+/* Project img card styles */
 .project-card img {
   object-fit: cover;
+  width: 100%;
+  height: auto;
+  max-height: 20vh; /* Adjusted max height */
 }
 
 /* Header styling */
@@ -140,7 +152,7 @@ swiper-slide {
 }
 
 .menu:hover {
-  transform: translateY(-5px);
+  transform: translate(-50%, -50%) translateY(-5px);
   box-shadow: 0 12px 45px rgba(0, 0, 0, 0.3);
 }
 
@@ -173,7 +185,7 @@ swiper-slide {
 }
 
 .header .menu li:hover {
-  color: #00d8ff; /* A bright accent color from your theme */
+  color: #1ABC9C; /* A bright accent color from your theme */
 }
 
 .header .menu a {
