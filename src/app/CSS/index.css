@@ -1,46 +1,84 @@
 .index-container {
-    position: absolute;
-    top: 20%;
-    right: 20%;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.index-container h2 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.index-container ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.index-container li {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.index-container li.active span {
+  color: #00d8ff;
+  font-weight: bold;
+}
+
+.index-container span {
+  color: #b0e0e6;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.index-container span:hover {
+  color: #00d8ff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .index-container {
+    top: 5%;
+    right: 5%;
+    width: 90%;
   }
-  
-  .index-container h2 {
-    font-size: 1.5rem;
-    color: #ffffff;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 480px) {
+  .index-container {
+    position: relative;
+    margin: 20px auto;
+    width: 90%;
+    top: 0;
+    right: 0;
   }
-  
-  .index-container ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+}
+
+/* Styling for logo */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-right: auto; /* Move logo to the left */
+}
+
+@media (max-width: 768px) {
+  .logo {
+    font-size: 1.2rem;
   }
-  
-  .index-container li {
-    margin-bottom: 10px;
-    cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1rem;
   }
-  
-  .index-container li.active span {
-    color: #00d8ff;
-    font-weight: bold;
-  }
-  
-  .index-container span {
-    color: #b0e0e6;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .index-container span:hover {
-    color: #00d8ff;
-  }
-  
+}

@@ -83,8 +83,27 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .project-card-content {
+    width: 90%;
+    max-height: 70vh;
+  }
+  
+  .menu {
+    top: 10px;
+    left: 10px;
+  }
+}
+
 @media (min-width: 768px) {
   .project-card {
-    flex: 0 0 33.3333%;
+    flex: 0 0 50%;
+    margin: 0 auto;
+  }
+
+  .project-card-content {
+    width: 80%;
+    max-height: 70vh;
   }
 }

@@ -8,7 +8,6 @@ body {
   overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-
 #tsparticles {
   position: absolute;
   width: 100%;
@@ -31,46 +30,17 @@ swiper-slide {
 
 .projects-container {
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  height: 100vh; /* Full height */
-  width: 100%; /* Full width */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   position: relative;
-  z-index: 5; /* Ensure it's above other elements */
+  height: 100vh;
+  width: 100%;
+  padding: 20px;
 }
 
-.project-card {
-  width: 80%; /* Adjust width as needed */
-  max-width: 800px; /* Adjust max-width as needed */
-  margin: 20px; /* Margin around the card */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
-  border-radius: 10px; /* Round the corners */
-  overflow: hidden; /* Prevent overflow */
-  transition: transform 0.3s ease-in-out; /* Smooth hover effect */
-  position: relative; /* Position relative to the container */
-}
-
-@media (min-width: 1920px) { /* Adjust for 1080p screens and above */
-  .project-card {
-    width: 50%; /* Adjust width for larger screens */
-    margin: 20px; /* Keep consistent margin */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhance shadow for better depth perception on larger screens */
+@media (max-width: 768px) {
+  .projects-container {
+    padding: 10px;
   }
 }
-
-/* Responsive adjustments */
-@media (max-width: 768px) { /* Adjust for tablets and below */
-  .project-card {
-    width: 90%; /* Increase width on smaller screens for better use of space */
-    margin: 10px; /* Reduce margin to save space */
-  }
-}
-
-@media (max-width: 480px) { /* Adjust for mobile phones */
-  .project-card {
-    width: 95%; /* Further increase width on very small screens */
-    margin: 5px; /* Further reduce margin */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Lighter shadow to match smaller screen aesthetic */
-  }
-}
-

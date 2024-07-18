@@ -68,7 +68,11 @@ const Home: React.FC = () => {
           <SoftSkillsSection />
         </section>
       )}
-      
+      {activeSection === 'contact' && (
+        <section id="contact" className="full-height">
+          <Footer />
+        </section>
+      )}
     </div>
   );
 };
