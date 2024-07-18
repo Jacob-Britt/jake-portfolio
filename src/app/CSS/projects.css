@@ -5,14 +5,15 @@ body {
   color: #ffffff;
   font-family: 'Roboto', sans-serif;
   margin: 0;
-  overflow: hidden; /* Prevent scrolling */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Project container styling */
 .projects-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   position: relative;
   height: 100vh; /* Full height */
   width: 100%;
@@ -41,13 +42,16 @@ swiper-slide {
 
 /* Project card styling */
 .project-card {
-  flex: 0 0 100%;
-  width: 100%;
+  flex: 0 0 80%;
+  max-width: 900px;
+  margin: 20px;
 }
 
 .projects-content {
   display: flex;
   width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Project card content styling */
@@ -61,18 +65,13 @@ swiper-slide {
   border: 1px solid rgba(255, 255, 255, 0.18);
   text-align: center;
   transition: transform 0.3s ease-in-out;
-  width: 80%;
-  max-width: 1200px; /* Increased width */
+  width: 100%;
   max-height: 90vh; /* Ensure it does not overflow */
-  margin: 0 auto;
   overflow: hidden;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
 .project-card-content h2 {
-  font-size: 2.5rem; /* Increased font size */
+  font-size: 2rem; /* Adjust font size */
   color: #ffffff;
   margin-bottom: 10px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
@@ -87,7 +86,7 @@ swiper-slide {
 .project-card-content img {
   border-radius: 10px;
   width: 100%;
-  max-height: 60vh; /* Increased height */
+  max-height: 50vh; /* Ensure it fits well within the card */
   transition: transform 0.3s ease-in-out;
 }
 
@@ -117,22 +116,23 @@ swiper-slide {
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 1000px;
-  left: 500px; /* Keep the current position */
+  top: 20px;
+  left: 40px;
   z-index: 10;
-  transform: scale(4); 
-  color: rgb(177, 177, 233); /* Makes text color blue */
-  text-shadow: 2px 2px 4px #2e004e; /* Adds a blackish purple shadow effect */
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px 20px;
+  border-radius: 10px;
 }
 
 .header .menu ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  gap: 20px;
 }
 
 .header .menu li {
-  margin-bottom: 10px;
   cursor: pointer;
 }
 
