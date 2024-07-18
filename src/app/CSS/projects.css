@@ -185,7 +185,7 @@ swiper-slide {
 }
 
 .header .menu li:hover {
-  color: #1ABC9C; /* A bright accent color from your theme */
+  color: #119ae9; /* A bright accent color from your theme */
 }
 
 .header .menu a {
@@ -196,5 +196,5 @@ swiper-slide {
 }
 
 .header .menu a:hover {
-  color: #1ABC9C; /* Ensure links match the hover effect */
+  color: #03a5ce; 
 }
