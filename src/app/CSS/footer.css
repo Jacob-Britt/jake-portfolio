@@ -14,9 +14,9 @@
 
 @media (max-width: 768px) {
   .footer {
-    padding: 10px; /* Reduce padding on smaller screens */
-    padding-top: 2vh;
-    margin-top: 5vh; /* Adjust top margin for smaller screens */
+    padding: 5px; /* Reduce padding on smaller screens */
+    padding-top: 1vh;
+    margin-top: 3vh; /* Adjust top margin for smaller screens */
   }
 
   .container {
@@ -36,7 +36,7 @@
   .footer {
     padding: 5px; /* Further reduce padding for very small screens */
     padding-top: 2vh;
-    margin-top: 5vh;
+    margin-top: 3vh;
   }
 
   .footer-title {
@@ -46,6 +46,32 @@
   .footer-icons {
     flex-direction: column; /* Stack icons vertically */
     align-items: center; /* Center-align the stacked icons */
+  }
+}
+
+/* Additional media query for screens smaller than 320px */
+@media (max-width: 320px) {
+  .footer {
+    padding: 2px; /* Further reduce padding for extremely small screens */
+    padding-top: 1vh;
+    margin-top: 3vh; /* Adjust top margin for extremely small screens */
+  }
+
+  .container {
+    padding: 0 5px; /* Further reduce side padding for the container */
+  }
+
+  .footer-section {
+    margin-bottom: 5px; /* Further reduce bottom margin for elements within the footer */
+  }
+
+  .footer-title {
+    font-size: 1rem; /* Further reduce font size for titles on extremely small screens */
+  }
+
+  .footer-icons {
+    gap: 5px; /* Further reduce gap between icons */
+    /* Keep flex-direction and alignment from previous media query */
   }
 }
 
