@@ -42,8 +42,8 @@ swiper-slide {
 
 /* Project card styling */
 .project-card {
-  flex: 0 0 80%;
-  max-width: 900px;
+  flex: 0 0 70%; /* Smaller size */
+  max-width: 800px; /* Reduced max-width */
   margin: 20px;
 }
 
@@ -66,7 +66,7 @@ swiper-slide {
   text-align: center;
   transition: transform 0.3s ease-in-out;
   width: 100%;
-  max-height: 90vh; /* Ensure it does not overflow */
+  max-height: 80vh; /* Ensure it does not overflow */
   overflow: hidden;
 }
 
@@ -116,8 +116,8 @@ swiper-slide {
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 20px;
-  left: 40px;
+  top: 20px; /* Move up */
+  left: 20px; /* Adjusted position */
   z-index: 10;
   background-color: rgba(0, 0, 0, 0.7);
   padding: 10px 20px;
