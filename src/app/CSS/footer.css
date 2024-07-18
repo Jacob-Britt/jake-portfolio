@@ -1,7 +1,5 @@
 .footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
+  position: relative; /* Changed from fixed to relative */
   width: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   color: #ffffff;
@@ -11,7 +9,44 @@
   -webkit-backdrop-filter: blur(10px);
   border-top: 1px solid rgba(255, 255, 255, 0.18);
   padding-top: 2vh;
-  margin-top: 10vh;
+  margin-top: 10vh; /* Adjust or remove based on layout needs */
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 10px; /* Reduce padding on smaller screens */
+    padding-top: 2vh;
+    margin-top: 5vh; /* Adjust top margin for smaller screens */
+  }
+
+  .container {
+    padding: 0 10px; /* Reduce side padding for the container */
+  }
+
+  .footer-section {
+    margin-bottom: 10px; /* Reduce bottom margin for elements within the footer */
+  }
+
+  .footer-icons {
+    gap: 10px; /* Reduce gap between icons */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 5px; /* Further reduce padding for very small screens */
+    padding-top: 2vh;
+    margin-top: 5vh;
+  }
+
+  .footer-title {
+    font-size: 1.2rem; /* Reduce font size for titles */
+  }
+
+  .footer-icons {
+    flex-direction: column; /* Stack icons vertically */
+    align-items: center; /* Center-align the stacked icons */
+  }
 }
 
 .container {
