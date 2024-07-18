@@ -17,7 +17,7 @@ const projects = [
     imageSrc: '/WellSenseAIPoster.png',
     description: `Our capstone project leverages AI to transform the oil and gas sector by enabling proactive maintenance and reducing operational costs. We collect and analyze sensor data to predict potential issues, optimizing performance using public datasets and developing an intuitive user interface for real-time monitoring.`,
     skills: 'Python, AWS, React, Next.js, Machine Learning',
-    learnings: 'I honed our skills in data science, machine learning, cloud computing, and front-end development, working with a modern technology stack to create a scalable and user-friendly platform for oil well maintenance.'
+    learnings: 'I honed my skills in data science, machine learning, cloud computing, and front-end development, working with a modern technology stack to create a scalable and user-friendly platform for oil well maintenance.'
   },
   {
     title: 'Droid-Sync',

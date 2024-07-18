@@ -13,16 +13,16 @@ const Header: React.FC = () => {
 
   return (
     <section className="header-section relative text-white" id="about">
-      <nav className="absolute left-8 top-8">
-        <ul className="space-y-2 text-left">
+      <nav className="absolute left-40 top-20 p-4 bg-opacity-50 bg-black rounded-lg shadow-lg">
+        <ul className="space-y-4 text-left">
           <li
-            className="text-lg font-semibold cursor-pointer hover:text-gray-400"
+            className="text-2xl font-bold cursor-pointer hover:text-gray-400"
             onClick={() => scrollToSection('projects')}
           >
             Work
           </li>
           <li
-            className="text-lg font-semibold cursor-pointer hover:text-gray-400"
+            className="text-2xl font-bold cursor-pointer hover:text-gray-400"
             onClick={() => scrollToSection('about')}
           >
             About
@@ -47,10 +47,22 @@ const Header: React.FC = () => {
       </div>
       <div className="about-section text-center p-8 bg-gradient-to-b from-gray-800 to-black rounded-lg shadow-lg mx-8 mb-8">
         <h2 className="text-4xl font-semibold mb-4">About Me</h2>
-        <p className="text-lg mb-4">I’m a second-year graduate at the Center Of Geographical Sciences (COGS) in Lawrencetown, Nova Scotia. I’m a passionate Programmer looking for a career in the industry. I have worked with many different programming languages. I’m currently working on a project using the Unreal 5 game engine and C#.</p>
+        <p className="text-lg mb-4">
+          I’m a second-year graduate at the Center Of Geographical Sciences (COGS) in Lawrencetown, Nova Scotia. As a passionate programmer, I am eager to start my career in the industry. I have extensive experience working with various programming languages and am currently working on a project using the Unreal 5 game engine and C#.
+        </p>
+        <p className="text-lg mb-4">
+          My expertise includes web development, software engineering, and game development. I have a strong foundation in JavaScript, React, Node.js, and have also worked with technologies like Python, Java, and Kotlin. My projects range from web applications to interactive games, showcasing my versatility and dedication to learning and growing in the field.
+        </p>
+        <p className="text-lg mb-4">
+          I am actively seeking opportunities where I can apply my skills and contribute to innovative projects. I am particularly interested in roles that involve problem-solving, creativity, and continuous learning.
+        </p>
         <div className="flex justify-center space-x-4">
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="bg-gray-700 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded-lg inline-block">GitHub</a>
-          <a href="https://www.linkedin.com/in/jacob-britton-885965254/" target="_blank" rel="noopener noreferrer" className="bg-gray-700 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded-lg inline-block">LinkedIn</a>
+          <a href="https://github.com/jacob-britton" target="_blank" rel="noopener noreferrer" className="bg-gray-700 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded-lg inline-block">
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/jacob-britton-885965254/" target="_blank" rel="noopener noreferrer" className="bg-gray-700 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded-lg inline-block">
+            LinkedIn
+          </a>
         </div>
       </div>
     </section>
