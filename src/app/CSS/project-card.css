@@ -12,6 +12,7 @@
   position: relative;
   top: 15%;
   z-index: 5; /* Ensure it is above other elements */
+  margin-bottom: 25rem;
 }
 
 .projects-content {
@@ -20,6 +21,7 @@
   justify-content: center; /* Center children horizontally */
   align-items: center; /* Center children vertically */
   height: 100vh; /* Full height of the viewport */
+  margin-bottom: 20rem;
 }
 
 /* Project card content styling */
@@ -42,7 +44,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center; 
-  margin-bottom: 10rem;
+  margin-bottom: 35rem;
 }
 
 .project-card-content h2 {
