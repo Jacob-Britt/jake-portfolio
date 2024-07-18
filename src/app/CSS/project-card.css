@@ -1,5 +1,7 @@
 /* Project card styling */
 .project-card {
+  display: flex;
+  overflow: auto; /* Allows scrolling if content overflows */
   width: 90%; /* Adjusted to fit better */
   max-width: 900px; /* Increased max-width */
   margin: 20px; /* Add some margin around the card */
@@ -22,6 +24,8 @@
 
 /* Project card content styling */
 .project-card-content {
+  display: flex;
+  overflow: auto; /* Allows scrolling if content overflows */
   background-color: rgba(0, 0, 0, 0.7);
   padding: 20px;
   border-radius: 15px;

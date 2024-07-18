@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { use, useEffect, useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -62,6 +62,56 @@ const ProjectsSection: React.FC = () => {
       section.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
+
+  useEffect(() => {
+    const isSectionInView = () => {
+      const aboutSection = document.getElementById('about');
+      if (!aboutSection) return false;
+  
+      const rect = aboutSection.getBoundingClientRect();
+      return rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
+    };
+  
+    const adjustSectionHeightsAndScroll = () => {
+      const sections = document.querySelectorAll('.full-height');
+      sections.forEach(section => {
+        const element = section as HTMLElement;
+        element.style.height = `${window.innerHeight}px`;
+      });
+  
+      // Check if 'about' section is in view before scrolling to 'projects'
+      if (!isSectionInView()) {
+        scrollToSection('projects');
+      }
+    };
+  
+    // Debounce resize event to prevent excessive calls
+    let resizeTimer: string | number | NodeJS.Timeout | undefined;
+    const handleResize = () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        adjustSectionHeightsAndScroll();
+      }, 250);
+    };
+  
+    window.addEventListener('resize', handleResize);
+    document.addEventListener('fullscreenchange', adjustSectionHeightsAndScroll);
+    document.addEventListener('webkitfullscreenchange', adjustSectionHeightsAndScroll);
+    document.addEventListener('mozfullscreenchange', adjustSectionHeightsAndScroll);
+    document.addEventListener('MSFullscreenChange', adjustSectionHeightsAndScroll);
+  
+    // Initial adjustment and scroll
+    adjustSectionHeightsAndScroll();
+  
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      document.removeEventListener('fullscreenchange', adjustSectionHeightsAndScroll);
+      document.removeEventListener('webkitfullscreenchange', adjustSectionHeightsAndScroll);
+      document.removeEventListener('mozfullscreenchange', adjustSectionHeightsAndScroll);
+      document.removeEventListener('MSFullscreenChange', adjustSectionHeightsAndScroll);
+    };
+  }, []);
+
 
   return (
     <div id="projects" className="projects-container full-height">
