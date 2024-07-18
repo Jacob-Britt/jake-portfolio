@@ -88,8 +88,13 @@ swiper-slide {
 .project-card-content img {
   border-radius: 10px;
   width: 100%;
-  max-height: 40vh; /* Ensure it fits well within the card */
+  max-height: 15vh; /* Ensure it fits well within the card */
   transition: transform 0.3s ease-in-out;
+}
+
+/* Project img card syles */
+.project-card img {
+  object-fit: cover;
 }
 
 /* Header styling */
@@ -168,7 +173,7 @@ swiper-slide {
 }
 
 .header .menu li:hover {
-  color: #1ABC9C; /* A bright accent color from your theme */
+  color: #00d8ff; /* A bright accent color from your theme */
 }
 
 .header .menu a {
