@@ -42,7 +42,6 @@ const projects = [
   }
 ];
 
-
 const ProjectsSection: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const swiperRef = useRef<SwiperCore>(null);
@@ -84,7 +83,6 @@ const ProjectsSection: React.FC = () => {
       <Swiper
         spaceBetween={50}
         slidesPerView={1}
-        
         onSlideChange={handleSlideChange}
         style={{ width: '100%', height: '100%' }}
       >

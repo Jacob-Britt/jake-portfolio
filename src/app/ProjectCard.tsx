@@ -7,8 +7,6 @@ interface ProjectCardProps {
   imageSrc?: string;
   skills: string;
   learnings: string;
-  githubLink?: string;
-
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, videoSrc, imageSrc, skills, learnings }) => {
