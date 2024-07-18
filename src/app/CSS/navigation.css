@@ -1,0 +1,35 @@
+nav {
+    position: absolute;
+    top: 2rem; 
+    right: 2rem; 
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1), 0px 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    z-index: 100; /* Ensure the nav is on top */
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Align items horizontally */
+  }
+  
+  nav ul li {
+    font-size: 1.5rem; /* Adjusted font size for modern look */
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s, text-shadow 0.3s; /* Smooth transition for hover effect */
+    margin-right: 16px; /* Add space between items */
+  }
+  
+  nav ul li:last-child {
+    margin-right: 0; /* Remove margin from the last item */
+  }
+  
+  nav ul li:hover {
+    color: #0fa9d8;
+    text-shadow: 0 0 10px #0fa9d8, 0 0 20px #0fa9d8; /* Text glow effect */
+  }
+  

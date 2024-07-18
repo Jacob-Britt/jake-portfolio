@@ -3,6 +3,7 @@
 import React from 'react';
 import './CSS/header.css';
 import './CSS/about.css';
+import './CSS/navigation.css';
 
 const Header: React.FC = () => {
   const scrollToSection = (sectionId: string) => {

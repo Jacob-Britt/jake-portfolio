@@ -19,39 +19,6 @@
   100% { background-position: 0% 0%; }
 }
 
-nav {
-  position: absolute;
-  left: 50rem;
-  top: 34rem;
-  padding: 16px;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 8px;
-  box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1), 0px 2px 4px -1px rgba(0, 0, 0, 0.06);
-  transition: transform 0.3s ease; /* Smooth transition for hover effect */
-}
-
-nav:hover {
-  transform: translateY(-10px); /* Slight move up on hover */
-}
-
-nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-nav ul li {
-  font-size: 40px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: color 0.3s, text-shadow 0.3s; /* Smooth transition for hover effect */
-}
-
-nav ul li:hover {
-  color: #0fa9d8;
-  text-shadow: 0 0 10px #0fa9d8, 0 0 20px #0fa9d8; /* Text glow effect */
-}
-
 .title-glitch-effect {
   font-size: 4rem;
   font-weight: 600;

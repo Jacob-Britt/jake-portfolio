@@ -1,0 +1,80 @@
+/* Project card styling */
+.project-card {
+  width: 100%; /* Adjusted to fit better */
+  max-width: 900px; /* Increased max-width */
+  margin: 20px; /* Add some margin around the card */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Add a shadow for depth */
+  border-radius: 10px; /* Optional: round the corners */
+  overflow: hidden; /* Ensure nothing spills outside the card's bounds */
+  transition: transform 0.3s ease-in-out; /* Add a smooth hover effect */
+  position: absolute; /* Center the card on the screen */
+  top: 50%;
+  left: 50%;
+  transform: translate(-190%, -60%);
+}
+
+.projects-content {
+  display: flex;
+  width: 100%;
+  justify-content: center; /* Center children horizontally */
+  align-items: center; /* Center children vertically */
+  height: 100vh; /* Full height of the viewport */
+}
+
+/* Project card content styling */
+.project-card-content {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  width: 100%; /* Ensure content width is 100% of card */
+  max-height: 80vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: auto;
+}
+
+.project-card-content h2 {
+  font-size: 2rem; /* Adjust font size */
+  color: #ffffff;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.project-card-content p {
+  color: #b0e0e6;
+  margin-bottom: 10px;
+  max-height: 20vh; /* Added max-height for text */
+  overflow: auto;
+}
+
+.project-card-content video,
+.project-card-content img {
+  max-width: 80%; /* Limit the image's width to 80% of its container */
+  max-height: 40%; /* Limit the image's height to 40% of its container */
+  object-fit: contain; /* Ensure the full image is shown */
+  display: block; /* Treat the image as a block-level element */
+  margin: auto; /* Center the image horizontally */
+  border-radius: 10px; /* Optional: match the container's border-radius */
+}
+
+/* Styling for logo */
+.logo {
+  font-size: 2rem; /* Adjust the size of the logo text */
+  font-weight: bold; /* Make the logo text bold */
+  color: #fff; /* Set the color of the logo text */
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8); /* Add a glow effect */
+  transition: transform 0.3s ease; /* Add a smooth transition effect */
+  position: absolute; /* Position the element absolutely relative to its first positioned (not static) ancestor element */
+  left: 0; /* Align to the left side of the screen */
+  top: 0; /* Align to the top of the screen (optional, adjust as needed) */
+}

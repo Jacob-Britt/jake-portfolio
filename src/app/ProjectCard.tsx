@@ -1,4 +1,6 @@
 import React from 'react';
+import './CSS/project-card.css';
+
 
 interface ProjectCardProps {
   title: string;
@@ -11,7 +13,7 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, videoSrc, imageSrc, skills, learnings }) => {
   return (
-    <div className="project-card-content">
+    <div className="project-card project-card-content">
       <div className="project-card-background"></div>
       <div className="project-card-overlay">
         <h2>{title}</h2>

@@ -6,10 +6,10 @@ import 'swiper/css/pagination';
 import ProjectCard from './ProjectCard';
 import ParticlesBackground from './ParticlesBackground';
 import './CSS/projects.css';
-// import './CSS/background-effects.css';
 import Index from './Index';
 import Footer from './Footer';
 import SwiperCore from 'swiper';
+import './CSS/navigation.css';
 
 const projects = [
   {
@@ -68,7 +68,7 @@ const ProjectsSection: React.FC = () => {
       <ParticlesBackground />
       <header className="header">
         <div className="logo">Jake</div>
-        <nav className="menu">
+        <nav>
           <ul>
             <li onClick={() => scrollToSection('projects')}>
               Work
