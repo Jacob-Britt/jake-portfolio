@@ -96,7 +96,6 @@ const ProjectsSection: React.FC = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <Footer />
     </div>
   );
 };
