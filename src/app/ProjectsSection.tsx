@@ -1,4 +1,6 @@
-import React, { use, useEffect, useRef, useState } from 'react';
+"use client";
+
+import React, { useEffect, useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -8,8 +10,8 @@ import ParticlesBackground from './ParticlesBackground';
 import './CSS/projects.css';
 import Index from './Index';
 import Footer from './Footer';
-import SwiperCore from 'swiper';
-import './CSS/navigation.css';
+import { Navigation, Pagination } from 'swiper/modules';
+import { Swiper as SwiperType } from 'swiper/types';
 
 const projects = [
   {
@@ -17,36 +19,38 @@ const projects = [
     imageSrc: '/WellSenseAIPoster.png',
     description: `Our capstone project leverages AI to transform the oil and gas sector by enabling proactive maintenance and reducing operational costs. We collect and analyze sensor data to predict potential issues, optimizing performance using public datasets and developing an intuitive user interface for real-time monitoring.`,
     skills: 'Python, AWS, React, Next.js, Machine Learning',
-    learnings: 'I honed my skills in data science, machine learning, cloud computing, and front-end development, working with a modern technology stack to create a scalable and user-friendly platform for oil well maintenance.'
+    learnings: 'I honed my skills in data science, machine learning, cloud computing, and front-end development, working with a modern technology stack to create a scalable and user-friendly platform for oil well maintenance.',
   },
   {
     title: 'Droid-Sync',
     description: 'This is a project in the works that takes an audio file from your phone and plays it inside the app.',
     videoSrc: '/Droid-Sync.mp4',
     skills: 'Java, Android Studio, XML, Kotlin',
-    learnings: 'I learned how to use Android Studio and how to use Kotlin, making use of internal file access and the default media player in Android.'
+    learnings: 'I learned how to use Android Studio and Kotlin, making use of internal file access and the default media player in Android.',
   },
   {
     title: 'Unreal 5 Project',
     description: 'This project was a tutorial I followed on UNFGames.com, where I delved into the fundamentals of terrain editing in Unreal 5 and learned how to manipulate models within the engine.',
     imageSrc: '/SnowyTerrain.png',
     skills: 'Unreal 5, C++, C#',
-    learnings: 'Throughout this experience, I gained a profound understanding of Unreal Engine 5, mastering the art of crafting terrains and seamlessly integrating and manipulating models. It was an enriching journey that expanded my skills and vision within the realm of game development.'
+    learnings: 'Throughout this experience, I gained a profound understanding of Unreal Engine 5, mastering the art of crafting terrains and seamlessly integrating and manipulating models.',
   },
   {
     title: 'Java Calculator App',
     description: 'In this project, I made a calculator in Java having the basic functionality of a calculator.',
     imageSrc: '/Calc.png',
     skills: 'Java',
-    learnings: 'I learned how to use Java GUI elements and gained a better understanding of Java classes and methods.'
-  }
+    learnings: 'I learned how to use Java GUI elements and gained a better understanding of Java classes and methods.',
+  },
 ];
 
 const ProjectsSection: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const swiperRef = useRef<SwiperCore>(null);
+  
+  
+  const swiperRef = useRef<SwiperType | null>(null);
 
-  const handleSlideChange = (swiper: SwiperCore) => {
+  const handleSlideChange = (swiper: any) => {
     setActiveIndex(swiper.activeIndex);
   };
 
@@ -56,84 +60,34 @@ const ProjectsSection: React.FC = () => {
     }
   };
 
-  const scrollToSection = (sectionId: string) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
-
   useEffect(() => {
-    const isSectionInView = () => {
-      const aboutSection = document.getElementById('about');
-      if (!aboutSection) return false;
-  
-      const rect = aboutSection.getBoundingClientRect();
-      return rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
-    };
-  
-    const adjustSectionHeightsAndScroll = () => {
+    const adjustSectionHeights = () => {
       const sections = document.querySelectorAll('.full-height');
-      sections.forEach(section => {
+      sections.forEach((section) => {
         const element = section as HTMLElement;
         element.style.height = `${window.innerHeight}px`;
       });
-  
-      // Check if 'about' section is in view before scrolling to 'projects'
-      if (!isSectionInView()) {
-        scrollToSection('projects');
-      }
     };
-  
-    // Debounce resize event to prevent excessive calls
-    let resizeTimer: string | number | NodeJS.Timeout | undefined;
-    const handleResize = () => {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(() => {
-        adjustSectionHeightsAndScroll();
-      }, 250);
-    };
-  
-    window.addEventListener('resize', handleResize);
-    document.addEventListener('fullscreenchange', adjustSectionHeightsAndScroll);
-    document.addEventListener('webkitfullscreenchange', adjustSectionHeightsAndScroll);
-    document.addEventListener('mozfullscreenchange', adjustSectionHeightsAndScroll);
-    document.addEventListener('MSFullscreenChange', adjustSectionHeightsAndScroll);
-  
-    // Initial adjustment and scroll
-    adjustSectionHeightsAndScroll();
-  
+
+    window.addEventListener('resize', adjustSectionHeights);
+    adjustSectionHeights();
+
     return () => {
-      window.removeEventListener('resize', handleResize);
-      document.removeEventListener('fullscreenchange', adjustSectionHeightsAndScroll);
-      document.removeEventListener('webkitfullscreenchange', adjustSectionHeightsAndScroll);
-      document.removeEventListener('mozfullscreenchange', adjustSectionHeightsAndScroll);
-      document.removeEventListener('MSFullscreenChange', adjustSectionHeightsAndScroll);
+      window.removeEventListener('resize', adjustSectionHeights);
     };
   }, []);
-
 
   return (
     <div id="projects" className="projects-container full-height">
       <ParticlesBackground />
-      <header className="header">
-        <div className="logo">Jake</div>
-        <nav>
-          <ul>
-            <li onClick={() => scrollToSection('projects')}>
-              Work
-            </li>
-            <li onClick={() => scrollToSection('about')}>
-              About
-            </li>
-          </ul>
-        </nav>
-      </header>
       <Index activeIndex={activeIndex} onIndexClick={handleIndexClick} />
       <Swiper
-        spaceBetween={50}
+        spaceBetween={10}
         slidesPerView={1}
         onSlideChange={handleSlideChange}
+        pagination={{ clickable: true }} // Enable pagination for better navigation
+        navigation // Enable navigation buttons
+        modules={[Pagination, Navigation]} // Ensure necessary modules are imported
         style={{ width: '100%', height: '100%' }}
       >
         {projects.map((project, index) => (
@@ -142,7 +96,6 @@ const ProjectsSection: React.FC = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-
       <Footer />
     </div>
   );

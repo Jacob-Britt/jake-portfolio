@@ -72,20 +72,126 @@
   border-radius: 10px; /* Optional: match the container's border-radius */
 }
 
-/* Responsive adjustments */
+/* Project card styling */
+.project-card {
+  display: flex;
+  overflow: auto; /* Allows scrolling if content overflows */
+  width: 90%; /* Adjusted to fit better */
+  max-width: 900px; /* Increased max-width */
+  margin: 20px; /* Add some margin around the card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
+  border-radius: 10px; /* Optional: round the corners */
+  overflow: hidden; /* Ensure nothing spills outside the card's bounds */
+  transition: transform 0.3s ease-in-out; /* Add a smooth hover effect */
+  position: relative;
+  top: 15%;
+  z-index: 5; /* Ensure it is above other elements */
+  margin-bottom: 20rem;
+}
+
+.projects-content {
+  display: flex;
+  width: 100%;
+  justify-content: center; /* Center children horizontally */
+  align-items: center; /* Center children vertically */
+  height: 100vh; /* Full height of the viewport */
+  margin-bottom: 20rem;
+}
+
+/* Project card content styling */
+.project-card-content {
+  display: flex;
+  overflow: auto; /* Allows scrolling if content overflows */
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  width: 100%; /* Ensure content width is 100% of card */
+  max-height: 80vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  margin-bottom: 25rem;
+  margin-top: 5rem;
+}
+
+.project-card-content h2 {
+  font-size: 2rem; /* Adjust font size */
+  color: #ffffff;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.project-card-content p {
+  color: #b0e0e6;
+  margin-bottom: 10px;
+  max-height: 20vh; /* Added max-height for text */
+  overflow: auto;
+}
+
+.project-card-content video,
+.project-card-content img {
+  max-width: 80%; /* Limit the image's width to 80% of its container */
+  max-height: 40%; /* Limit the image's height to 40% of its container */
+  object-fit: contain; /* Ensure the full image is shown */
+  display: block; /* Treat the image as a block-level element */
+  margin: auto; /* Center the image horizontally */
+  border-radius: 10px; /* Optional: match the container's border-radius */
+}
+
+/* Mobile adjustments for project card */
 @media (max-width: 768px) {
   .project-card {
-    width: 90%;
-    margin: 10px;
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 10px; /* Keep some roundness for better visuals */
+    margin-top: 5px; /* Reduce top margin */
+    margin-bottom: 30px;
+  }
+
+  .project-card-content {
+    padding: 10px;
+    font-size: 0.9rem;
+    overflow-y: auto; /* Allow scrolling for long content */
   }
 
   .project-card-content h2 {
-    font-size: 1.5rem;
+    font-size: 1.4rem; /* Keep titles readable */
   }
 
-  .project-card-content video,
-  .project-card-content img {
-    max-width: 90%;
-    max-height: 30vh;
+  .project-card-content img,
+  .project-card-content video {
+    max-width: 100%;
+    max-height: 35vh; /* Slightly adjust media size */
   }
+}
+
+@media (max-width: 480px) {
+  .project-card {
+    margin: 5px 0;
+    padding: 5px; /* Compact padding for small screens */
+    margin-top: 5px; /* Reduce top margin */
+    margin-bottom: 10px;
+  }
+
+  .project-card-content {
+    font-size: 0.85rem;
+  }
+
+  .project-card-content h2 {
+    font-size: 1.2rem;
+  }
+}
+
+.project-card-content {
+  max-height: 70vh; /* Limit the height for mobile */
+  overflow-y: auto; /* Allow vertical scrolling if content is too long */
+  margin-bottom: 10px; /* Add some space at the bottom */
 }

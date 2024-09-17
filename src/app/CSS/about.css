@@ -1,3 +1,4 @@
+/* Ensure the container takes up the full viewport height */
 .about-section {
   background: rgba(0, 0, 0, 0.7);
   padding: 20px;
@@ -31,4 +32,119 @@
 
 .section.hidden {
   display: none;
+}
+
+/* Add top padding to main content to account for fixed header */
+.main-content {
+  padding-top: 70px; /* Increased padding for more room */
+}
+
+.header-section {
+  min-height: 100vh; /* Use min-height instead of height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: url('/DarkWave.webp') no-repeat center center/cover;
+  color: white;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+  animation: moveBackground 100s linear infinite; /* Animated background */
+}
+
+@keyframes moveBackground {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 0%; }
+}
+
+.title-glitch-effect {
+  font-size: 4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  text-shadow: 0 0 10px #0fa9d8, 0 0 20px #0fa9d8;
+  animation: glitch 1s linear infinite, darkwave 3s linear infinite;
+}
+
+@keyframes darkwave {
+  0%, 100% {
+    text-shadow: 0 0 10px #040f13, 0 0 20px #0fa9d8, 0 0 30px #0fa9d8;
+  }
+  50% {
+    text-shadow: 0 0 20px #08242c, 0 0 30px #083341, 0 0 40px #0fa9d8;
+  }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 15px; /* Reduce padding for smaller screens */
+    margin-top: 15px; /* Adjust margin for smaller screens */
+  }
+
+  .about-section h2 {
+    font-size: 28px; /* Reduce font size for smaller screens */
+    margin-bottom: 8px; /* Adjust margin for smaller screens */
+  }
+
+  .about-section p {
+    font-size: 16px; /* Reduce font size for smaller screens */
+    margin-bottom: 15px; /* Adjust margin for smaller screens */
+  }
+
+  .about-section a {
+    padding: 8px 15px; /* Reduce padding for smaller screens */
+    margin-right: 8px; /* Adjust margin for smaller screens */
+  }
+
+  .header-section {
+    min-height: 80vh; /* Adjust height for smaller screens */
+  }
+
+  .main-content {
+    padding-top: 80px; /* Increased padding for more room */
+  }
+
+  .title-glitch-effect {
+    font-size: 3rem; /* Reduce font size for smaller screens */
+    margin-bottom: 0.75rem; /* Adjust margin for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section {
+    padding: 10px; /* Further reduce padding for very small screens */
+    margin-top: 10px; /* Adjust margin for very small screens */
+  }
+
+  .about-section h2 {
+    font-size: 24px; /* Further reduce font size for very small screens */
+    margin-bottom: 5px; /* Adjust margin for very small screens */
+  }
+
+  .about-section p {
+    font-size: 14px; /* Further reduce font size for very small screens */
+    margin-bottom: 10px; /* Adjust margin for very small screens */
+  }
+
+  .about-section a {
+    padding: 5px 10px; /* Further reduce padding for very small screens */
+    margin-right: 5px; /* Adjust margin for very small screens */
+  }
+
+  .header-section {
+    min-height: 70vh; /* Adjust height for very small screens */
+  }
+
+  .main-content {
+    padding-top: 90px; /* Increased padding for more room */
+  }
+
+  .title-glitch-effect {
+    font-size: 2.5rem; /* Further reduce font size for very small screens */
+    margin-bottom: 0.5rem; /* Adjust margin for very small screens */
+  }
 }

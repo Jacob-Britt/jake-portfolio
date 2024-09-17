@@ -1,126 +1,86 @@
+/* Footer styles */
 .footer {
-  position: relative; /* Changed from fixed to relative */
+  position: relative;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: #ffffff;
-  padding: 20px;
-  box-shadow: 0 -8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background-color: var(--background-color);
+  padding: 10px 5px;
+  box-shadow: var(--box-shadow);
   border-top: 1px solid rgba(255, 255, 255, 0.18);
-  padding-top: 2vh;
-  margin-top: 10vh; /* Adjust or remove based on layout needs */
-}
-
-@media (max-width: 768px) {
-  .footer {
-    padding: 5px; /* Reduce padding on smaller screens */
-    padding-top: 1vh;
-    margin-top: 3vh; /* Adjust top margin for smaller screens */
-  }
-
-  .container {
-    padding: 0 10px; /* Reduce side padding for the container */
-  }
-
-  .footer-section {
-    margin-bottom: 10px; /* Reduce bottom margin for elements within the footer */
-  }
-
-  .footer-icons {
-    gap: 10px; /* Reduce gap between icons */
-  }
-}
-
-@media (max-width: 480px) {
-  .footer {
-    padding: 5px; /* Further reduce padding for very small screens */
-    padding-top: 2vh;
-    margin-top: 3vh;
-  }
-
-  .footer-title {
-    font-size: 1.2rem; /* Reduce font size for titles */
-  }
-
-  .footer-icons {
-    flex-direction: column; /* Stack icons vertically */
-    align-items: center; /* Center-align the stacked icons */
-  }
-}
-
-/* Additional media query for screens smaller than 320px */
-@media (max-width: 320px) {
-  .footer {
-    padding: 2px; /* Further reduce padding for extremely small screens */
-    padding-top: 1vh;
-    margin-top: 3vh; /* Adjust top margin for extremely small screens */
-  }
-
-  .container {
-    padding: 0 5px; /* Further reduce side padding for the container */
-  }
-
-  .footer-section {
-    margin-bottom: 5px; /* Further reduce bottom margin for elements within the footer */
-  }
-
-  .footer-title {
-    font-size: 1rem; /* Further reduce font size for titles on extremely small screens */
-  }
-
-  .footer-icons {
-    gap: 5px; /* Further reduce gap between icons */
-    /* Keep flex-direction and alignment from previous media query */
-  }
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  margin-top: 1vh;
+  height: auto;
   text-align: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
 }
 
-.footer-section {                                                                                                                                                               
-  margin-bottom: 20px;
-}
-
+/* Footer title styles */
 .footer-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #00d8ff;
-  margin-bottom: 10px;
+  font-size: var(--font-size-small);
+  margin-bottom: 5px;
 }
 
-.footer-subtitle {
-  color: #b0e0e6;
-}
-
+/* Footer link styles */
 .footer-link {
-  color: #00d8ff;
+  color: var(--primary-color);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footer-link:hover {
-  color: #ffffff;
+  color: white;
 }
 
+/* Footer icons container */
 .footer-icons {
   display: flex;
-  gap: 20px;
+  gap: 5px;
 }
 
+/* Footer icon styles */
 .footer-icon {
-  color: #b0e0e6;
+  color: var(--secondary-color);
   transition: color 0.3s ease;
 }
 
 .footer-icon:hover {
-  color: #ffffff;
+  color: white;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .footer {
+    padding: 3px; /* Further reduce padding for smaller screens */
+    margin-top: 0.5vh; /* Adjusted margin */
+  }
+
+  .footer-title {
+    font-size: 0.7rem; /* Smaller font size */
+  }
+
+  .footer-icons {
+    flex-direction: column;
+    align-items: center;
+    gap: 3px; /* Further reduced gap */
+  }
+
+  .footer-icon {
+    font-size: 0.7rem; /* Smaller icon size */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 2px; /* Further reduced padding */
+    margin-top: 0.5vh; /* Adjusted margin */
+  }
+
+  .footer-title {
+    font-size: 0.6rem; /* Further reduced font size */
+  }
+
+  .footer-icons {
+    gap: 2px; /* Further reduced gap */
+  }
+
+  .footer-icon {
+    font-size: 0.6rem; /* Further reduced icon size */
+  }
 }

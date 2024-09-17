@@ -44,41 +44,35 @@
   color: #00d8ff;
 }
 
-/* Responsive adjustments */
+/* Hide or minimize index on mobile */
 @media (max-width: 768px) {
   .index-container {
-    top: 5%;
-    right: 5%;
-    width: 90%;
+    display: none; /* Hide index for better focus on projects */
   }
 }
 
 @media (max-width: 480px) {
   .index-container {
-    position: relative;
-    margin: 20px auto;
-    width: 90%;
     top: 0;
     right: 0;
+    width: 100%;
+    height: auto;
+    margin: 10px auto;
+    padding: 15px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.85); /* Ensure it remains visible on mobile */
+    border-radius: 10px; /* Keep it rounded for mobile */
+    display: flex; /* Flex display for better control */
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .index-container h2 {
+    font-size: 1.2rem; /* Reduce font size for mobile */
+  }
+
+  .index-container li {
+    font-size: 1rem; /* Adjust list item font size */
+    margin-bottom: 5px;
   }
 }
 
-/* Styling for logo */
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #ffffff;
-  margin-right: auto; /* Move logo to the left */
-}
-
-@media (max-width: 768px) {
-  .logo {
-    font-size: 1.2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .logo {
-    font-size: 1rem;
-  }
-}

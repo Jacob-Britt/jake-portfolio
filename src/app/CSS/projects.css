@@ -36,12 +36,18 @@ body {
   position: relative;
   height: 100vh; /* Full height of the viewport */
   width: 100%; /* Full width of the viewport */
-  padding: 20px;
   box-sizing: border-box; /* Include padding in the width and height calculations */
 }
 
+/* Mobile adjustments for the projects container */
 @media (max-width: 768px) {
   .projects-container {
-    padding: 10px;
+    padding-top: 20px; /* Add more padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-container {
+    padding-top: 20px; /* Ensure more padding on smaller mobile screens */
   }
 }

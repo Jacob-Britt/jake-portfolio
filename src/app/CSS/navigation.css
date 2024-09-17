@@ -1,51 +1,77 @@
-nav {
-    position: fixed;
-    top: 2rem;
-    right: 2rem;
-    padding: 16px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1), 0px 2px 4px -1px rgba(0, 0, 0, 0.06);
-    transition: transform 0.3s ease;
-    z-index: 15;
+/* Base styles for navigation */
+.navigation {
+  background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+  color: white;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure navigation stays above other content */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: #00d8ff; /* Bright cyan for toggle button */
+  cursor: pointer;
+  display: none; /* Hidden by default */
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin-left: 20px;
+}
+
+.nav-item a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px; /* Add padding for better click area */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-item a:hover {
+  background-color: #00d8ff; /* Bright cyan background on hover */
+  color: black; /* Dark text on hover */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block; /* Show toggle button on smaller screens */
   }
-  
-  nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: row; /* Default to row layout */
+
+  .nav-menu {
+    display: none; /* Hide menu by default on smaller screens */
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
   }
-  
-  nav ul li {
-    font-size: 1.5rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: color 0.3s, text-shadow 0.3s;
-    margin-right: 16px;
+
+  .nav-menu.nav-menu-open {
+    display: flex; /* Show menu when open */
   }
-  
-  nav ul li:last-child {
-    margin-right: 0;
+
+  .nav-item {
+    margin: 10px 0; /* Adjust margin for menu items */
   }
-  
-  nav ul li:hover {
-    color: #0fa9d8;
-    text-shadow: 0 0 10px #0fa9d8, 0 0 20px #0fa9d8;
-  }
-  
-  @media (max-width: 768px) {
-    nav {
-      top: 1rem;
-      right: 1rem;
-    }
-  
-    nav ul {
-      flex-direction: column; /* Stack items vertically on smaller screens */
-    }
-  
-    nav ul li {
-      margin-bottom: 8px;
-    }
-  }
-  
+}
