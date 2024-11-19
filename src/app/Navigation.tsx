@@ -1,8 +1,26 @@
 "use client"
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './CSS/navigation.css';
 
+
+
+
 const Navigation: React.FC = () => {
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const nav = document.querySelector('.navigation');
+      if (window.scrollY > 50) {
+        nav?.classList.add('scrolled');
+      } else {
+        nav?.classList.remove('scrolled');
+      }
+    };
+  
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+  
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
