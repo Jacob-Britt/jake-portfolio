@@ -1,33 +1,30 @@
 "use client"
-import Link from 'next/link';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './CSS/navigation.css';
 
-const Header: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+const Navigation: React.FC = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <nav className="navigation">
       <div className="nav-container">
-        <div className="nav-header">
-          <button className="nav-toggle" onClick={toggleMenu}>
-            ☰
-          </button>
-        </div>
-        <ul className={`nav-menu ${isOpen ? 'nav-menu-open' : ''}`}>
+        <span className="nav-logo">Jake Britton</span>
+        <button
+          className="nav-toggle"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+        >
+          ☰
+        </button>
+        <ul className={`nav-menu ${menuOpen ? 'nav-menu-open' : ''}`}>
           <li className="nav-item">
-            <Link href="/projects">
-              Projects
-            </Link>
+            <a href="#about">About Me</a>
           </li>
           <li className="nav-item">
-            <Link href="/">
-              About  
-            </Link>
+            <a href="#projects">Projects</a>
+          </li>
+          <li className="nav-item">
+            <a href="#contact">Contact</a>
           </li>
         </ul>
       </div>
@@ -35,4 +32,4 @@ const Header: React.FC = () => {
   );
 };
 
-export default Header;
+export default Navigation;

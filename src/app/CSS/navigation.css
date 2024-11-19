@@ -1,33 +1,30 @@
-/* Base styles for navigation */
 .navigation {
-  background-color: rgba(0, 0, 0, 0.8); /* Dark background */
-  color: white;
-  padding: 10px 20px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 15px 30px; /* Increased padding for a balanced look */
   position: fixed;
   top: 0;
-  width: 100%;
-  z-index: 1000; /* Ensure navigation stays above other content */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  left: 0;
+  width: 100%; /* Ensure it spans the full width */
+  z-index: 1000;
+  box-shadow: var(--box-shadow-light);
+}
+
+.nav-toggle {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--primary-color); 
+  cursor: pointer;
+  display: none;
 }
 
 .nav-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Space out logo and links */
   align-items: center;
-}
-
-.nav-header {
-  display: flex;
-  align-items: center;
-}
-
-.nav-toggle {
-  font-size: 24px;
-  background: none;
-  border: none;
-  color: #00d8ff; /* Bright cyan for toggle button */
-  cursor: pointer;
-  display: none; /* Hidden by default */
+  max-width: 1200px; /* Center align within a container */
+  margin: 0 auto;
 }
 
 .nav-menu {
@@ -37,41 +34,42 @@
   padding: 0;
 }
 
-.nav-item {
-  margin-left: 20px;
-}
 
 .nav-item a {
-  color: white;
-  text-decoration: none;
-  padding: 10px 15px; /* Add padding for better click area */
-  border-radius: 5px; /* Rounded corners */
-  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 10px 20px; /* Increased padding for clickable links */
+  color: var(--text-color);
+  border-radius: var(--border-radius);
 }
 
 .nav-item a:hover {
-  background-color: #00d8ff; /* Bright cyan background on hover */
-  color: black; /* Dark text on hover */
+  background-color: var(--primary-color);
+  color: #ffffff;
 }
 
-/* Responsive adjustments for smaller screens */
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
   .nav-toggle {
-    display: block; /* Show toggle button on smaller screens */
+    display: block;
   }
 
   .nav-menu {
-    display: none; /* Hide menu by default on smaller screens */
+    display: none;
     flex-direction: column;
     width: 100%;
     text-align: center;
+    background-color: var(--background-color);
+    position: absolute;
+    top: 50px; /* Below the navigation bar */
+    left: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for dropdown */
   }
 
   .nav-menu.nav-menu-open {
-    display: flex; /* Show menu when open */
+    display: flex;
   }
 
   .nav-item {
-    margin: 10px 0; /* Adjust margin for menu items */
+    margin: 10px 0;
   }
 }

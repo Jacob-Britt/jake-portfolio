@@ -11,7 +11,7 @@
 }
 
 @keyframes glitch {
-  0% {
+  0%, 100% {
     clip: rect(24px, 9999px, 53px, 0);
     transform: skew(0.2deg);
   }
@@ -23,11 +23,11 @@
     clip: rect(14px, 9999px, 20px, 0);
     transform: skew(0.3deg);
   }
-  15% {
+  15%, 35% {
     clip: rect(34px, 9999px, 40px, 0);
     transform: skew(0.4deg);
   }
-  20% {
+  20%, 95% {
     clip: rect(24px, 9999px, 30px, 0);
     transform: skew(0.5deg);
   }
@@ -39,17 +39,9 @@
     clip: rect(34px, 9999px, 40px, 0);
     transform: skew(0.2deg);
   }
-  35% {
-    clip: rect(14px, 9999px, 20px, 0);
-    transform: skew(0.4deg);
-  }
   40% {
     clip: rect(54px, 9999px, 60px, 0);
     transform: skew(0.1deg);
-  }
-  45% {
-    clip: rect(34px, 9999px, 40px, 0);
-    transform: skew(0.5deg);
   }
   50% {
     clip: rect(24px, 9999px, 30px, 0);
@@ -87,16 +79,6 @@
     clip: rect(34px, 9999px, 40px, 0);
     transform: skew(0.3deg);
   }
-  95% {
-    clip: rect(24px, 9999px, 30px, 0);
-    transform: skew(0.5deg);
-  }
-  100% {
-    clip: rect(54px, 9999px, 60px, 0);
-    transform: skew(0.2deg);
-  }
-}
 
-.animate-glitch {
-  animation: glitch 100s infinite;
+  
 }

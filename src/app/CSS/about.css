@@ -1,150 +1,153 @@
-/* Ensure the container takes up the full viewport height */
-.about-section {
-  background: rgba(0, 0, 0, 0.7);
-  padding: 20px;
-  border-radius: 10px;
-  margin-top: 20px;
+/* General Styling */
+body {
+  background: linear-gradient(to bottom, #ffffff, #f9f9f9);
+  font-family: 'Poppins', sans-serif;
+  color: #333333;
+  margin: 0;
+  padding: 0;
 }
 
-.about-section h2 {
-  font-size: 36px;
+/* Layout */
+.profile-layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 20px;
+  align-items: flex-start;
+}
+
+/* Profile Banner (Left Panel) */
+.profile-banner {
+  flex: 1;
+  max-width: 300px;
+}
+
+.profile-card {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+}
+
+/* Profile Image */
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  display: block; 
+}
+
+.profile-name {
+  font-size: 1.8rem;
+  color: #1e88e5;
   margin-bottom: 10px;
 }
 
-.about-section p {
-  font-size: 18px;
+.profile-title {
+  font-size: 1rem;
+  color: #555555;
   margin-bottom: 20px;
 }
 
-.about-section a {
-  display: inline-block;
-  margin-right: 10px;
-  padding: 10px 20px;
-  border-radius: 5px;
-  background: #444;
-  color: white;
-  text-decoration: none;
-}
-
-.about-section a:hover {
-  background: #666666;
-}
-
-.section.hidden {
-  display: none;
-}
-
-/* Add top padding to main content to account for fixed header */
-.main-content {
-  padding-top: 70px; /* Increased padding for more room */
-}
-
-.header-section {
-  min-height: 100vh; /* Use min-height instead of height */
+.social-icons {
   display: flex;
-  flex-direction: column;
+  gap: 15px;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  background: url('/DarkWave.webp') no-repeat center center/cover;
-  color: white;
-  position: relative;
-  z-index: 10;
-  overflow: hidden;
-  animation: moveBackground 100s linear infinite; /* Animated background */
 }
 
-@keyframes moveBackground {
-  0% { background-position: 0% 0%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 0%; }
+.social-icons a {
+  color: #555555;
+  transition: color 0.3s ease;
 }
 
-.title-glitch-effect {
-  font-size: 4rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
+.social-icons a:hover {
+  color: #1e88e5;
+}
+
+/* About Section (Right Panel) */
+.about-content {
+  flex: 2;
+  max-width: 600px;
+}
+
+.about-content h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333333;
+}
+
+.about-content h1 span {
+  color: #1e88e5;
+}
+
+.about-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #555555;
+  margin-bottom: 20px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 15px;
+}
+.action-buttons .button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.button.primary:hover {
+  background: #005cb2;
+  transform: translateY(-2px);
+}
+
+.about-section {
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #ffffff, #f9f9f9);
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  color: #333333;
+}
+
+.button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.button.primary {
   color: #ffffff;
-  text-shadow: 0 0 10px #0fa9d8, 0 0 20px #0fa9d8;
-  animation: glitch 1s linear infinite, darkwave 3s linear infinite;
+  background: #1e88e5;
 }
 
-@keyframes darkwave {
-  0%, 100% {
-    text-shadow: 0 0 10px #040f13, 0 0 20px #0fa9d8, 0 0 30px #0fa9d8;
-  }
-  50% {
-    text-shadow: 0 0 20px #08242c, 0 0 30px #083341, 0 0 40px #0fa9d8;
-  }
+.button.primary:hover {
+  background: #005cb2;
+  transform: translateY(-2px);
 }
 
-/* Responsive adjustments for smaller screens */
-@media (max-width: 768px) {
-  .about-section {
-    padding: 15px; /* Reduce padding for smaller screens */
-    margin-top: 15px; /* Adjust margin for smaller screens */
-  }
-
-  .about-section h2 {
-    font-size: 28px; /* Reduce font size for smaller screens */
-    margin-bottom: 8px; /* Adjust margin for smaller screens */
-  }
-
-  .about-section p {
-    font-size: 16px; /* Reduce font size for smaller screens */
-    margin-bottom: 15px; /* Adjust margin for smaller screens */
-  }
-
-  .about-section a {
-    padding: 8px 15px; /* Reduce padding for smaller screens */
-    margin-right: 8px; /* Adjust margin for smaller screens */
-  }
-
-  .header-section {
-    min-height: 80vh; /* Adjust height for smaller screens */
-  }
-
-  .main-content {
-    padding-top: 80px; /* Increased padding for more room */
-  }
-
-  .title-glitch-effect {
-    font-size: 3rem; /* Reduce font size for smaller screens */
-    margin-bottom: 0.75rem; /* Adjust margin for smaller screens */
-  }
+.button.secondary {
+  color: #1e88e5;
+  border: 2px solid #1e88e5;
+  background: transparent;
 }
 
-@media (max-width: 480px) {
-  .about-section {
-    padding: 10px; /* Further reduce padding for very small screens */
-    margin-top: 10px; /* Adjust margin for very small screens */
-  }
-
-  .about-section h2 {
-    font-size: 24px; /* Further reduce font size for very small screens */
-    margin-bottom: 5px; /* Adjust margin for very small screens */
-  }
-
-  .about-section p {
-    font-size: 14px; /* Further reduce font size for very small screens */
-    margin-bottom: 10px; /* Adjust margin for very small screens */
-  }
-
-  .about-section a {
-    padding: 5px 10px; /* Further reduce padding for very small screens */
-    margin-right: 5px; /* Adjust margin for very small screens */
-  }
-
-  .header-section {
-    min-height: 70vh; /* Adjust height for very small screens */
-  }
-
-  .main-content {
-    padding-top: 90px; /* Increased padding for more room */
-  }
-
-  .title-glitch-effect {
-    font-size: 2.5rem; /* Further reduce font size for very small screens */
-    margin-bottom: 0.5rem; /* Adjust margin for very small screens */
-  }
+.button.secondary:hover {
+  background: #1e88e5;
+  color: #ffffff;
+  transform: translateY(-2px);
 }
