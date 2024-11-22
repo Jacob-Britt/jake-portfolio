@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
         <h2>Contact Me</h2>
         <p>
           You can reach me at{" "}
-          <a href="mailto:jacobabritton@gmail.com">jacobabritton@gmail.com</a>
+          <a href="mailto:Brittonajacob@gmail.com">Brittonajacob@gmail.com</a>
         </p>
       </div>
       <div className="footer-icons">
